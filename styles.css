@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #202124;
+  color: #bdc1c6;
+  /* padding: 14px; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-family: sans-serif, 'Times New Roman', Times, serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+  color: white;
+}
+
+.iconButtonContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;  
+}
+
+.iconButton {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+header section img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid cyan;
+}
+
+nav, section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.whiteLink{
+  color: white;
+}
+
+.greyLink{
+  color: lightgrey;
+}
+
+a {
+  text-decoration: unset;
+  font-size: 0.8em;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  /* 
+  flex-grow : 1;    ➜ The div will grow in same proportion as the window-size        
+  flex-shrink : 1;  ➜ The div will shrink in same proportion as the window-size 
+  flex-basis : 0;   ➜ The div does not have a starting value as such and will take up screen as per the screen size available for
+  e.g:- if 3 divs are in the wrapper then each div will take 33%
+  */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 14px;
+}
+
+.headerText{
+  font-size: 4em;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.searchBar{
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  gap: 14px;
+  border: 1px solid grey;
+  padding: 14px;
+  border-radius: 24px;
+}
+
+.searchBar:hover{
+  border-color: transparent;
+  background-color: #303134;
+}
+
+input {
+  background: transparent;
+  outline: none;
+  border: unset;
+  color: white;
+  flex: 1;
+}
+
+.searchButtonsContainer button{
+  padding: 10px 14px;
+  border-radius: 4px;
+  background: #303134;
+  border: unset;
+  color: white;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.searchButtonsContainer{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.searchButtonsContainer button:hover{
+  border-color: darkgrey;
+}
+
+.languageSelection{
+  font-size: 0.9em;
+}
+
+.languageSelection span{
+  color: cyan;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+footer > section {
+  padding: 14px;
+}
+
+footer > section:last-child {
+  border-top: 1px solid darkgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footerLink{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+@media (min-width: 540px) {
+  footer > section:last-child {
+    flex-direction: row;
+  }
+}
